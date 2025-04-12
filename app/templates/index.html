@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Demo App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/app/static/styles.css"
+</head>
+<body>
+    <div class="container">
+        <h1>Hello DevOps World!</h1>
+        <p>This application is running in <span class="environment">{{ environment }}</span> environment</p>
+        <p>Deployed via GitHub Actions CI/CD Pipeline</p>
+        <p class="timestamp">Last Deployment: <span id="deployment-time"></span></p>
+    </div>
+    
+    <script>
+        document.getElementById('deployment-time').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
