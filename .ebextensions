@@ -1,0 +1,6 @@
+# .ebextensions/01_force_port.config
+option_settings:
+  aws:elasticbeanstalk:application:environment:
+    PORT: 5000  # Forces the environment variable
+  aws:elasticbeanstalk:container:docker:
+    ContainerPort: 5000  # Explicitly sets the container port
